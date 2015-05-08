@@ -14,6 +14,7 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var todos_list_1 = require('./todos-list');
 var MyAppComponent = (function () {
     function MyAppComponent() {
         this.name = 'Alice';
@@ -23,7 +24,8 @@ var MyAppComponent = (function () {
             selector: 'my-app'
         }),
         angular2_1.View({
-            template: "<h1> Hello {{name}} </h1>"
+            template: "\n    <h1> Hello {{name}} </h1>\n    <todos-list></todos-list>\n    ",
+            directives: [todos_list_1.TodosListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);
